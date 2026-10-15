@@ -1,0 +1,8 @@
+{
+  "python_oracle_checkpoints": 48,
+  "maximum_absolute_state_error": 1.1868284133242923e-13,
+  "replay_chronology_checks": 7855,
+  "determinism": true,
+  "parameters_affect_model": true,
+  "domain_guards": true
+}

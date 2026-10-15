@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-06",
+  "browser": "Codex in-app browser",
+  "launch": true,
+  "play_pause": true,
+  "pause_stable_time": "34.495 s",
+  "reset": true,
+  "exact_step_seconds": 0.005,
+  "integer_tick_seek": true,
+  "playback_speed_2x": true,
+  "vehicle_and_telemetry_update": true,
+  "real_apex_prediction": true,
+  "real_tvlqr_gains_and_corrections": true,
+  "horizon_node_inspection": true,
+  "model_switching": true,
+  "parameter_effect": {
+    "mass_before_kg": 2,
+    "mass_after_kg": 3,
+    "rounded_vy_after_4s_before_mps": 0.008,
+    "rounded_vy_after_4s_after_mps": 0.002
+  },
+  "parameter_reset": true,
+  "restore_defaults": true,
+  "linear_and_smooth_grip": true,
+  "step_steer": {
+    "initial_delta_rad": 0,
+    "final_delta_rad": 0.02
+  },
+  "telemetry_hide": true,
+  "architecture_inspection": true,
+  "capability_and_roadmap_inspection": true,
+  "responsive_widths": [
+    1440,
+    390
+  ],
+  "mobile_document_width": 390,
+  "retained_cases": [
+    {
+      "experiment": "latency",
+      "time": "58.275 s",
+      "tracker": "TVLQR + speed P",
+      "status": "Solve_Succeeded"
+    },
+    {
+      "experiment": "near-limit",
+      "time": "31.575 s",
+      "tracker": "TVLQR + speed P",
+      "status": "Solve_Succeeded"
+    },
+    {
+      "experiment": "disturbance",
+      "time": "32.405 s",
+      "tracker": "TVLQR + speed P",
+      "status": "Solve_Succeeded"
+    },
+    {
+      "experiment": "exhaustion",
+      "time": "32.570 s",
+      "tracker": "Latched LQR / PI",
+      "status": "No active packet"
+    }
+  ],
+  "console_errors": []
+}

@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+import {capabilities} from '../web/inventory.mjs';
+const header='# APEX capability matrix\n\nInspected 6 October 2026. IMPLEMENTED requires source and existing outputs/tests; PARTIAL describes experimental limits; PLANNED means no working implementation. NEXT identifies the immediate unexecuted continuation.\n\n| Capability | Classification | Verified scope | Source | Bench representation |\n|---|---|---|---|---|\n';
+const rows=capabilities.map(r=>'| '+[r[0],r[1].toUpperCase(),r[2],'`'+r[3]+'`',r[4]].join(' | ')+' |').join('\n');
+const footer='\n\nThe actual current chain is offline Planning line and speed → APEX nonlinear trajectory planner → timestamped validity buffer → TVLQR/P trajectory tracker → independently injectable dynamic plant → perfect state feedback. TVLQR is active in normal trajectory tracking; Task005 LQR/PI is the explicit exhaustion fallback.\n\nGeneric physical parameters are unknown. All provided mass/inertia/tire values and fixtures are synthetic. The legacy introductory README text is stale; newer implementation and latest CODEX_HANDOFF.md were inspected. Task007C-R is complete; C1–C4 diagnosis remains unexecuted. No inferred safety certificate, working perception or defensive behavior.\n';
+fs.writeFileSync(new URL('../CAPABILITY_MATRIX.md',import.meta.url),header+rows+footer);
